@@ -1,5 +1,5 @@
 # Recruitment test solution
-**__Recruitment test, given by a web development company in Malaysia__**
+**_Recruitment test, given by a web development company in Malaysia_**
 
 ## Instructions given by the recruiter
 

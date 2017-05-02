@@ -1,15 +1,11 @@
-# Recruitment test
-**__recruitment test, given by a web development company in Malaysia__**
+# Recruitment test solution
+**__Recruitment test, given by a web development company in Malaysia__**
 
-## instructions given by the recruiter
+## Instructions given by the recruiter
 
-Create an app, that can enter the daily expenses. The app will have one
-screen. At the top of the screen is a form where user enter the description 
-and amount, and a button to "Add" the item to the expenses. 
+Create an app, that can enter the daily expenses. The app will have one screen. At the top of the screen is a form where user enter the description and amount, and a button to "Add" the item to the expenses. 
 
-Following the form, there is a list of the expenses that has been added. The list
-shows the expense description and the amount. 
-At the bottom of the list, the total of all the expenses are shown.
+Following the form, there is a list of the expenses that has been added. The list shows the expense description and the amount. At the bottom of the list, the total of all the expenses are shown.
 
 ### Technical Specifications 
 
@@ -31,5 +27,4 @@ At the bottom of the list, the total of all the expenses are shown.
 
 8. App should delete the item from the backend database through an HTTP API.
 
- You can use any framework/library that you want. Backend can be created with any
-backend technology (eg. PHP, NodeJS, Java, Firebase, Amazon Lambda, etc).
+ You can use any framework/library that you want. Backend can be created with any backend technology (eg. PHP, NodeJS, Java, Firebase, Amazon Lambda, etc).

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Recruitment test</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <ul id="dropdown1" class="dropdown-content">
+        <li><a href="#!" id="logout">Logout</a></li>
+        <!--<li class="divider"></li>-->
+        <li><a href="#!">Profile</a></li>
+    </ul>
+    <nav class="teal lighten-1">
+        <div class="nav-wrapper">
+            <a href="index.html" class="brand-logo hide-on-small-and-down">Expenses</a>
+            <ul class="right">
+                <li id="link-profile" hidden><a id="profile" class="dropdown-button" href="#!" data-activates="dropdown1">Profile<i class="material-icons right">arrow_drop_down</i></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="signup" hidden>
+        <div class="container">
+            <div class="row valign-wrapper">
+                <div class="col s12 m8 l6">
+                    <h3 class="teal-text text-lighten-1">Signup</h3>
+                    <form onsubmit="return false;" id="signUp">
+                        <div class="input-field col s12">
+                            <input autocomplete="off" type="email" id="signup-email" class="validate col" name="signup-email" />
+                            <label for="signup-email">Email</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <input autocomplete="off" type="password" id="signup-password" class="validate col" name="signup-password" />
+                            <label for="signup-password">Password</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <input autocomplete="off" type="password" id="confirm-password" class="validate col" name="confirm-password" />
+                            <label for="signup-password">Confirm Password</label>
+                        </div>
+                    </form>
+                    <div class="input-field col s12">
+                        <button type="submit" id="signup-button" form="signUp" class="btn-floating btn-large right addValue waves-light teal darken-1 waves-effect">
+                            <i class="material-icons right">send</i>Send
+                        </button>
+                    </div>
+                    <p style="padding-left: 10px">
+                        Already a user? click here to <a class="teal-text" href="index.html">Login</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <main id="signin" hidden>
+        <div class="container">
+            <div class="row valign-wrapper">
+                <div class="col s12 m8 l6">
+                    <h3 class="teal-text text-lighten-1">Signin</h3>
+                    <form onsubmit="return false;" id="signIn">
+                        <div class="input-field col s12">
+                            <input autocomplete="off" type="email" id="signin-email" class="validate col" name="signin-email" />
+                            <label for="signin-email">Email</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <input autocomplete="off" type="password" id="signin-password" class="validate col" name="signin-password" />
+                            <label for="signin-password">Password</label>
+                        </div>
+                    </form>
+                    <div class="input-field col s12">
+                        <button type="submit" id="signin-button" form="signIn" class="btn-floating btn-large right addValue waves-light teal darken-1 waves-effect">
+                            <i class="material-icons right">done</i>Send
+                        </button>
+                    </div>
+                    <p style="padding-left: 10px">
+                        New user? click here to <a class="teal-text" href="#!" id="landing">Signup</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <main id="app" hidden>
+        <div class="container">
+            <div class="row valign-wrapper">
+                <div class="col s12 m8 l6">
+                    <h3 class="teal-text text-lighten-1">New Expense</h3>
+                    <form onsubmit="return false;" id="addExpense">
+                        <div class="input-field col s12">
+                            <input autocomplete="off" type="text" id="description" class="col" name="description" />
+                            <label for="description">Description</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <input autocomplete="off" type="text" id="amount" class="validate col" name="amount" />
+                            <label for="amount" data-error="Please enter an amount" data-success="Expense added">Amount</label>
+                        </div>
+                    </form>
+                    <div class="input-field col s12">
+                        <button type="submit" id="submit" form="addExpense" class="btn-floating btn-large right addValue waves-light teal darken-1 waves-effect">
+                            <i class="material-icons right">add</i>Add
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="row valign-wrapper">
+                <div class="col s12 m8 l6">
+                    <h3 class="teal-text text-lighten-1">Expenses</h3>
+                    <table class="highlight">
+                        <thead>
+                            <tr>
+                                <th data-field="desc" class="col s6">Description</th>
+                                <th data-field="amount" class="col s5">Amount</th>
+                                <th class="col s1"></th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <th class="col s6">Total</th>
+                                <th class="col s5" data-field="totalAmount">
+                                    <div id="sumTotal"></div>
+                                </th>
+                                <th class="col s1"></th>
+                            </tr>
+                        </tfoot>
+                        <tbody class="expenses">
+                            <tr hidden>
+                                <th class="col s6"></th>
+                                <th class="col s5"></th>
+                                <th class="col s1"></th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="page-footer white-text teal lighten-1">
+        <div class="container">
+            <div class="row valign-wrapper">
+                <div class="col s12 m10 l10">
+                    <h5>Recruitment Test</h5>
+                    <p>Create an app, that can enter the daily expenses. The app will have one screen. At the top of the screen
+                        is a form where user enter the description and amount, and a button to "Add" the item to the expenses.</p>
+                    <p> Following the form, there is a list of the expenses that has been added. The list shows the expense description
+                        and the amount. At the bottom of the list, the total of all the expenses are shown.</p>
+                </div>
+            </div>
+            <div class="row valign-wrapper">
+                <div class="col s12 m10 l10">
+                    <h5>Technical Specifications</h5>
+                    <ol>
+                        <li>App should be a single page JS app.</li>
+                        <li>App should save newly created expense into the backend through an HTTP API.</li>
+                        <li>App should load existing expenses in the database through an HTTP API, when the page loads.</li>
+                        <li>When new item is added to the list, it should appear at the top of the list.
+                        </li>
+                        <li>Following the rule 4, the list should be sorted by date in descending order. Last comes first.</li>
+                        <li>When displaying the new Item at the top of the list, it should slide down with an animation.</li>
+                        <li>Each item in the expenses list will have a "Delete" button. When pressed, the item will be deleted
+                            from the list. The deleted item should slide up and disappear.
+                        </li>
+                        <li> App should delete the item from the backend database through an HTTP API. You can use any framework/library
+                            that you want. Backend can be created with any backend technology (eg. PHP, NodeJS, Java, Firebase,
+                            Amazon Lambda, etc).
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- scripts START here  -->
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.serializeJSON/2.7.2/jquery.serializejson.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
+    <script>
+        var config = {
+            apiKey: "AIzaSyDdo9qeHpWC1rLebGy-boa-dxUCUTrsDD8",
+            authDomain: "testrun-dbe5d.firebaseapp.com",
+            databaseURL: "https://testrun-dbe5d.firebaseio.com",
+            storageBucket: "testrun-dbe5d.appspot.com",
+            messagingSenderId: "534939746276"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="main.js"></script>
+    <!-- scripts END here  -->
+</body>
+
+</html>

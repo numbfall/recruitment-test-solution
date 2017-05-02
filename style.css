@@ -1,0 +1,50 @@
+ .row > div {
+     float: none;
+     margin: 0 auto;
+ }
+ body {
+     display: flex;
+     flex-direction: column;
+     min-height: 100vh;
+ }
+ main {
+     flex: 1 0 auto;
+ }
+ table a {
+     cursor: pointer;
+ }
+ table tr {
+     display: flex;
+     align-items: center;
+ }
+ tbody tr {
+     padding: 10px 0;
+ }
+ thead tr,
+ tfoot tr {
+     height: 45px;
+ }
+ tbody {
+     display: flex;
+     flex-direction: column-reverse;
+ }
+ table td:first-child {
+     text-transform: capitalize;
+ }
+ tfoot th:nth-child(2) {
+     text-decoration: underline;
+ }
+ tbody tr td:nth-child(2):before {
+     content: '$';
+ }
+ tfoot th:nth-child(2):before {
+     content: '$';
+     float: left;
+ }
+ ol li {
+     margin-left: -22px;
+     padding: 2px 0 2px 5px;
+ }
+ nav {
+     padding: 0 10px;
+ }
